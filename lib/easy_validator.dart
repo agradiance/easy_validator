@@ -1,7 +1,6 @@
 library easy_validator;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+/// Easy Validator
+
+export "package:easy_validator/src/classes/easy_valitador.dart";
+export 'package:easy_validator/src/types/easy_patterns.dart';

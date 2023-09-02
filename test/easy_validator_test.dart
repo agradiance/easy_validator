@@ -4,9 +4,13 @@ import 'package:easy_validator/easy_validator.dart';
 
 void main() {
   test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
+    final calculator = EasyValidator.validator(
+      value: "aa@gmailcom",
+      pattern: EasyPatterns.email,
+      errorMessage: "wrong",
+    );
+    expect(calculator, "wrong");
+    expect(calculator?.isEmpty, false);
+    expect(calculator?.isNotEmpty, true);
   });
 }
